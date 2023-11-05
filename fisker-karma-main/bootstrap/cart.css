@@ -1,0 +1,94 @@
+body{
+}
+.container{
+}
+.img1{
+    width: 250px;
+    height: auto;
+}
+
+.order_title{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.order_block{
+    background-color: lightgrey;
+    padding: 35px;
+    display: grid;
+    gap: 30px;
+    border-radius: 20px;
+
+}
+
+.order_block-cards{
+    background-color: #fff;
+}
+
+.order_block-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+
+
+}
+.block_card-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.block_card-title{
+    
+}
+.block_card-descr{
+    font-size: 14px;
+    color: gray;
+    display:flex;
+    text-align:start;
+    
+
+}
+.block_card-counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block_card-counter input {
+    width: 100px;
+    border: 2px;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: #ff0000;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+
+.block_card-counter span {
+    display: block;
+    font-size: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: black;
+    user-select: none;
+}
+
+.block_card-del{
+}
+
+.order_buy-btn{
+    max-width: 250px;
+    text-align: center;
+    justify-self: flex-end;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 15px;
+}

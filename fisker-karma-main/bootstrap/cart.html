@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisker Karma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script> 
+    <script src="https://kit.fontawesome.com/4a35b6f7dc.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="cart.css">
+    <script src="./js/cart.js"></script>
+</head>
+    <header class="container-fluid py-3 bg-dark text-white text-center">
+        <h1 class="display-4 text-uppercase " onclick="showAlert()">Welcome to Shop</h1>  
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item text-uppercase fa-solid"><a class="nav-link" href="C:\Users\Admin\Desktop\fisker-karma-main\bootstrap\main_bootstrap.html">Home</a></li>
+                <li class="nav-item text-uppercase fa-solid"><a class="nav-link" href="C:\Users\Admin\Desktop\fisker-karma-main\bootstrap\modelsboot.html">Models</a></li>
+                <li class="nav-item text-uppercase fa-solid"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item text-uppercase fa-solid"><a class="nav-link" href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <h2 class="order_title">Оформление заказа</h2>
+                     <div class="order_block">
+                        <div class="order_block-cards">
+                                <div class="order_block-card card-1" id="removeCard">
+                                <div class="block_card-info">
+                                    <img class="img1" src="../img/galex2.jpg" alt="pic">
+                                    <div class="block_card-about">
+                                        <div class="block_card-title"><h3>Fisker Karma Solstice</h3></div>
+                                        <div class="block_card-descr">The Fisker Karma Solstice is a luxurious electric sedan that <br>combines cutting-edge technology with timeless design.</div>
+                                    </div>
+                                </div>
+                                    <div class="block_card-counter">
+                                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                        <input type="text" value="1">
+                                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                    </div>
+                                    <div class="block_card-del">
+                                        <a href="#" id="removeBtn"><img src="../img/delete.svg" alt="trash"> </a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="order_block-card" id="removeCard1">
+                                    <div class="block_card-info">
+                                        <img class="img1" src="../img/fisker-ocean_100742229_h.jpg" alt="pic">
+                                        <div class="block_card-about">
+                                            <div class="block_card-title"><h3>Fisker Karma Equinox</h3></div>
+                                            <div class="block_card-descr">The Fisker Karma Equinox is a sleek and eco-friendly electric
+                                                sports<br>  car designed to offer an exhilarating driving experience.</div>
+                                        </div>
+                                    </div>
+                                        <div class="block_card-counter">
+                                            <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                            <input type="text" value="1">
+                                            <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                        </div>
+                                        <div class="block_card-del">
+                                            <a href="#" id="removeBtn1"><img src="../img/delete.svg" alt="trash"> </a>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="order_block-card card-3" id="removeCard">
+                                        <div class="block_card-info">
+                                            <img class="img1" src="../img/galex3.jpg" alt="pic">
+                                            <div class="block_card-about">
+                                                <div class="block_card-title"><h3>Fisker Karma SUV</h3></div>
+                                                <div class="block_card-descr">The Fisker Karma SUV is a spacious and versatile electric SUV that <br>caters to the needs of families and adventure seekers. </div>
+                                            </div>
+                                        </div>
+                                            <div class="block_card-counter">
+                                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                                <input type="text" value="1">
+                                                <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                            </div>
+                                            <div class="block_card-del">
+                                                <a href="#" id="removeBtn"><img src="../img/delete.svg" alt="trash"> </a>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="order_block-card card-4" id="removeCard">
+                                            <div class="block_card-info">
+                                                <img class="img1" src="../img/galex2.jpg" alt="pic">
+                                                <div class="block_card-about">
+                                                    <div class="block_card-title"><h3>Fisker Karma SUV 2.0</h3></div>
+                                                    <div class="block_card-descr">The Fisker Karma SUV 2.0 is an upgraded version of <br>the original electric SUVand advanced features.</div>
+                                                </div>
+                                            </div>
+                                                <div class="block_card-counter">
+                                                    <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                                    <input type="text" value="1">
+                                                    <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                                </div>
+                                                <div class="block_card-del">
+                                                    <a href="#" id="removeBtn"><img src="../img/delete.svg" alt="trash"> </a>
+                                                </div>
+                                                
+                                            </div>
+                        </div>
+                        <a class="order_buy-btn" href="#">Оформить заказ</a>
+                    </div>
+            </div>
+      </div>
+      <script>
+        document.getElementById('removeBtn').addEventListener("click", function(){
+            let removeCard = document.getElementById('removeCard');
+            if (removeCard){
+                removeCard.parentNode.removeChild(removeCard);
+            }
+        });
+    </script>
+    </body>
+</html>

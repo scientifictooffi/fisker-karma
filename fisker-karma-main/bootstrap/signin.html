@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Fisker Karma - Sign In</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg"> 
+    <style> 
+        body { 
+            background-color: #f8f9fa; 
+            font-family: Arial, sans-serif; 
+        } 
+        .form-container { 
+            background-color: #ffffff; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        } 
+        .btn-primary { 
+            background-color: #007bff; 
+            border-color: #007bff; 
+        } 
+        .btn-primary:hover { 
+            background-color: #0056b3; 
+            border-color: #0056b3; 
+        } 
+    </style> 
+    <script> 
+        function signIn() { 
+            var email = document.getElementById("email").value; 
+            var password = document.getElementById("password").value; 
+ 
+            var users = JSON.parse(localStorage.getItem("users")) || []; 
+            var user = users.find(u => u.email === email && u.password === password); 
+ 
+            if (user) { 
+                alert("Sign in successful!"); 
+                if (user.email === "admin2023@gmail.com" && user.password === "admin2023") { 
+                    window.location.href = "admin.html"; // Перенаправление на админ-панель 
+                } else{ 
+                    window.location.href = "main_bootstrap.html"; // Перенаправление на админ-панель 
+                } 
+            } else { 
+                alert("Invalid email or password. Please try again."); 
+            } 
+ 
+        } 
+    </script> 
+</head> 
+<body> 
+    <header class="py-3 bg-dark text-white text-center"> 
+        <h1 class="display-4 text-uppercase">Welcome to Fisker Karma</h1> 
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-center"> 
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#">Models</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+ 
+    <div class="container mt-5"> 
+        <div class="row justify-content-center"> 
+            <div class="col-md-6 form-container"> 
+                <h2 class="text-center mb-4">Sign In</h2> 
+                <form id="signInForm" onsubmit="signIn(); return false;"> 
+                    <div class="mb-3"> 
+                        <label for="email" class="form-label">Email</label> 
+                        <input type="email" class="form-control" id="email" name="email" required> 
+                    </div> 
+                    <div class="mb-3"> 
+                        <label for="password" class="form-label">Password</label> 
+                        <input type="password" class="form-control" id="password" name="password" required> 
+                    </div> 
+                    <div class="text-center"> 
+                        <button type="submit" class="btn btn-warning mt-3">Sign In</button> 
+                    </div> 
+                </form> 
+                <div class="text-center mt-3"> 
+                    <p>Don't have an account? <a href="signup.html">Sign Up</a></p> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</body> 
+</html>

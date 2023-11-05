@@ -1,0 +1,145 @@
+.lightgallery{
+    width: 300px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: #212529;
+}
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter input {
+    width: 100px;
+    border: 2px;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: #ff0000;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+
+.counter span {
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #0052cc;
+    user-select: none;
+}
+
+    .cart__num {
+    text-align: center;
+    background-color: #d62240;
+    width: 21px;
+    height: 26px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+.cart{
+display: flex;
+justify-content: flex-end;
+
+}
+.cart_img{
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 5px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+.card{
+    width: 250px;
+    transition: 0.5s;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    
+}
+
+.card_img{
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.lg-img{
+    width: 100%;
+}
+
+.card_descr{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+    padding-top: 10px;
+    text-align: center;
+    
+}
+
+.card_btn{
+    text-decoration: none;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 35px;
+    color: #fff;
+}
+
+.card_btn:hover{
+    background-color: rgb(231, 62, 62);
+}

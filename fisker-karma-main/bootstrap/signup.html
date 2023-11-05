@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Fisker Karma - Sign Up</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg"> 
+    <style> 
+        body { 
+            background-color: #f8f9fa; 
+            font-family: Arial, sans-serif; 
+        } 
+        .form-container { 
+            background-color: #ffffff; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        } 
+        .btn-primary { 
+            background-color: #007bff; 
+            border-color: #007bff; 
+        } 
+        .btn-primary:hover { 
+            background-color: #0056b3; 
+            border-color: #0056b3; 
+        } 
+    </style> 
+    <script> 
+        function signUp() { 
+            var name = document.getElementById("name").value; 
+            var email = document.getElementById("email").value; 
+            var password = document.getElementById("password").value; 
+ 
+            var user = { name: name, email: email, password: password }; 
+            var users = JSON.parse(localStorage.getItem("users")) || []; 
+            users.push(user); 
+            localStorage.setItem("users", JSON.stringify(users)); 
+ 
+            alert("Registration successful!"); 
+ 
+            // Перенаправление на страницу входа 
+            window.location.href = "signin.html"; 
+        } 
+    </script> 
+</head> 
+<body> 
+    <header class="py-3 bg-dark text-white text-center"> 
+        <h1 class="display-4 text-uppercase">Welcome to Fisker Karma</h1> 
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-center"> 
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#">Models</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+ 
+    <div class="container mt-5"> 
+        <div class="row justify-content-center"> 
+            <div class="col-md-6 form-container"> 
+                <h2 class="text-center mb-4">Sign Up</h2> 
+                <form id="signUpForm" onsubmit="signUp(); return false;"> 
+                    <div class="mb-3"> 
+                        <label for="name" class="form-label">Name</label> 
+                        <input type="text" class="form-control" id="name" name="name" required> 
+                    </div> 
+                    <div class="mb-3"> 
+                        <label for="email" class="form-label">Email</label> 
+                        <input type="email" class="form-control" id="email" name="email" required> 
+                    </div> 
+                    <div class="mb-3"> 
+                        <label for="password" class="form-label">Password</label> 
+                        <input type="password" class="form-control" id="password" name="password" required> 
+                    </div> 
+                    <div class="text-center"> 
+                        <button type="submit" class="btn btn-warning mt-3">Sign Up</button> 
+                    </div> 
+                </form> 
+                <div class="text-center mt-3"> 
+                    <p>Already have an account? <a href="signin.html">Sign In</a></p> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</body> 
+</html>
